@@ -1,0 +1,26 @@
+[project]
+name = "claude-api-playground"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Manmohan Bohara", email = "manmohan.bohara@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.122.0",
+    "python-dotenv>=1.2.2",
+]
+
+[project.scripts]
+claude-api-playground = "claude_api_playground:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "jupyter>=1.1.1",
+]
